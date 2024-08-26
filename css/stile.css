@@ -1,0 +1,107 @@
+/*variables*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #FD6F00;
+    --secundario--color: #000000;
+    --text--color: #000000;
+    --text--color2: #FFFFFF;
+}
+/* Estilos base */
+/* Estilos para dispositivos móviles */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea los elementos al inicio en móviles */
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    position: relative; /* Asegura que los elementos estén posicionados relativamente dentro del header */
+}
+
+.header__logo-img {
+    width: 100px;
+    margin-bottom: 10px; /* Espacio entre el logo y el botón de menú */
+}
+
+.header__nav-menu {
+    display: block;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Espacio entre el botón de menú y el contenido */
+}
+
+.header__nav div {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.header__nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.header__btn {
+    padding: 10px 20px;
+    background-color: #FD6F00;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+/* Mostrar el menú cuando se active */
+.header__nav.active div {
+    display: flex;
+}
+
+/* Estilos para pantallas de escritorio */
+@media (min-width: 769px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 40px;
+    }
+
+    .header__logo-img {
+        margin-bottom: 0; /* Elimina el margen en pantallas grandes */
+    }
+
+    .header__nav-menu {
+        display: none; /* Oculta el botón de menú en pantallas grandes */
+    }
+
+    .header__nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .header__nav div {
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header__nav-link {
+        margin: 0 15px;
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+
+    .header__btn {
+        width: auto; /* Ajusta el ancho del botón en pantallas grandes */
+    }
+}
